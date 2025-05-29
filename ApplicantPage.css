@@ -1,0 +1,455 @@
+/* Container setup */
+.applicant-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* Sidebar */
+.profile-card {
+  flex: 0 0 250px;
+  background-color: #3f51b5;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.logout-btn {
+  margin-top: auto;
+  background-color: #f44336;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Main content */
+.dashboard {
+  flex-grow: 1;
+  padding: 2rem 3rem;
+  overflow-x: auto;
+}
+
+.dashboard h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.card p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card.applications p {
+  color: #1976d2;
+}
+
+.card.interviews p {
+    padding: auto;
+    margin: 10%;
+  color: #388e3c;
+}
+
+.card.offers p {
+  color: #fbc02d;
+}
+
+/* Table */
+.applications-list h2 {
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #3f51b5;
+  color: white;
+}
+
+thead th, tbody td {
+  padding: 1rem;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.status {
+  padding: 0.3rem 0.75rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.85rem;
+}
+
+.status.interviewscheduled {
+  background-color: #4caf50;
+}
+
+.status.underreview {
+  background-color: #2196f3;
+}
+
+.status.rejected {
+  background-color: #e53935;
+}
+.apply-btn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+.apply-btn:hover {
+  background-color: #1565c0;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.modal-actions button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #388e3c;
+  color: white;
+}
+
+.modal-actions button[type="button"] {
+  background-color: #ccc;
+}
+.apply-btn {
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.apply-btn:hover {
+  background-color: #1565c0;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box */
+.modal {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.modal-actions button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.modal-actions button[type="button"] {
+  background-color: #ccc;
+}
+/* Container with Flexbox */
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  margin: 3rem auto;
+  max-width: 900px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Left Image Section */
+.image-section {
+  flex: 1;
+  background-image: url('images/roberto-cortese-ejhjSZKTeeg-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Right Form Section */
+.form-section {
+  flex: 1;
+  padding: 3rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* Labels */
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Input Fields */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 1.3rem;
+  border-radius: 5px;
+  border: 1.8px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: #3f51b5;
+  outline: none;
+  box-shadow: 0 0 5px #3f51b5;
+}
+
+/* Submit Button */
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3f51b5;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #303f9f;
+}
+
+/* Error Message */
+.error {
+  color: #d32f2f;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: center;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .image-section {
+    height: 200px;
+    flex: none;
+  }
+
+  .form-section {
+    padding: 2rem;
+  }
+}
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  display: inline-block;
+  color: white;
+  margin: 4px auto;
+  text-align: center;
+  min-width: 140px;  /* optional: to ensure consistent badge size */
+}
+
+/* Status-specific styles */
+.status.interview-scheduled {
+  background-color: #4caf50;
+}
+
+.status.under-review {
+  background-color: #2196f3;
+}
+
+.status.rejected {
+  background-color: #f44336;
+}
+
+/* Optional: improve table cell spacing */
+table td {
+  padding: 12px 16px;
+  vertical-align: middle;
+  text-align: center;
+}

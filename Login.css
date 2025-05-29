@@ -1,0 +1,114 @@
+/* Container now flexbox */
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  margin: 3rem auto;
+  max-width: 900px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Left side: image */
+.image-section {
+  flex: 1;
+  background-image: url('images/roberto-cortese-ejhjSZKTeeg-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Right side: form */
+.form-section {
+  flex: 1;
+  padding: 3rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* Form labels and inputs */
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 1.3rem;
+  border-radius: 5px;
+  border: 1.8px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: #3f51b5;
+  outline: none;
+  box-shadow: 0 0 5px #3f51b5;
+}
+
+/* Login button */
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3f51b5;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #303f9f;
+}
+
+/* Error message */
+.error {
+  color: #d32f2f;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: center;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .image-section {
+    height: 200px;
+  }
+}
